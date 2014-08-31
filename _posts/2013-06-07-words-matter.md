@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Don't tell me words don't matter"
+title:  "Words matter"
 author: "Barack Obama"
 date:   2013-06-27 23:03:28
 ---

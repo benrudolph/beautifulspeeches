@@ -1,5 +1,50 @@
+---
+name: CSS stylesheet
+---
 /* Base */
 /* ----------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url('{{ site.baseurl }}/fonts/Lato/Lato-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url('{{ site.baseurl }}/fonts/Lato/Lato-Regular.ttf')
+  format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url('{{ site.baseurl }}/fonts/Lato/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'vollkorn';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url('{{ site.baseurl }}/fonts/Vollkorn/Vollkorn-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url('{{ site.baseurl }}/fonts/Vollkorn/Vollkorn-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'gentium book basic';
+  font-style: bold;
+  font-weight: 400;
+  src: local('Gentium Regular'), local('Gentium-Regular'), url('{{ site.baseurl }}/fonts/Gentium/GenBkBasR.ttf') format('truetype');
+}
 
 * {
   margin: 0;
@@ -9,11 +54,12 @@
 html, body { height: 100%; }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'gentium book basic';
+  font-size: 24px;
   line-height: 1.5;
   font-weight: 300;
   background-color: #fdfdfd;
+  color: rgb(30, 30, 30);
 }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
@@ -169,10 +215,10 @@ a:visited { color: #205caa; }
 .post-header { margin: 10px 0 30px; }
 
 .post-header h1 {
-  font-size: 42px;
   letter-spacing: -1.75px;
   line-height: 1;
-  font-weight: 300;
+  text-transform: capitalize;
+  font-size: 70px;
 }
 
 .post-header .meta {
@@ -181,9 +227,14 @@ a:visited { color: #205caa; }
   margin-top: 5px;
 }
 
-.post-content { margin: 0 0 30px; }
+.post-content {
+  margin: 0 0 30px;
+}
 
-.post-content > * { margin: 20px 0; }
+.post-content > * {
+  margin: 25px 0;
+  line-height: 1.3em
+}
 
 
 .post-content h1,
@@ -215,12 +266,21 @@ a:visited { color: #205caa; }
 .post-content blockquote {
   border-left: 4px solid #e8e8e8;
   padding-left: 20px;
-  font-size: 18px;
+  font-size: 24px;
   opacity: .6;
   letter-spacing: -1px;
   font-style: italic;
   margin: 30px 0;
+  font-family: 'vollkorn';
 }
+
+/*
+ * .post-content p:first-letter {
+  display: block;
+  font-size: 30px;
+  position:relative;
+  font-weight: bold;
+}*/
 
 .post-content ul,
 .post-content ol { padding-left: 20px; }

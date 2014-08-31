@@ -1,12 +1,12 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Beautiful Speeches
+email: rudolphben@gmail.com
+description: "Some of the world's best speeches are hidden away on some of the most unappealing websites. This sites aims to allow great speeches to be great, unhindered by ads and unpleasing color schemes."
 baseurl: ""
 url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: _benrudolph
+github_username:  benrudolph
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: pretty

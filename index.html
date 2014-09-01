@@ -2,15 +2,36 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home" id="post-list">
 
-  <ul class="posts">
+  <div class="search-container">
+    <input class="search" />
+  </div>
+  <div class="sort-container">
+    <span class="sort" data-sort="post-link">Title</span>
+    <span class="sort" data-sort="post-date-sortable">Date</span>
+    <span class="sort" data-sort="post-author">Author</span>
+  </div>
+  <ul class="posts list">
     {% for post in site.posts %}
       <li>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <span class="post-date">{% if post.author %}{{ post.author }}{% endif %} • {{ post.date | date: "%b %-d, %Y" }}</span>
+        <div class="post-meta">
+          <span class="post-author">{% if post.author %}{{ post.author }}{% endif %}</span>
+            •
+          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="post-date-sortable gone" >{{ post.date }}</span>
+        </div>
       </li>
     {% endfor %}
   </ul>
 
 </div>
+<script src="{{ site.baseurl }}/js/list.min.js"></script>
+<script>
+var options = {
+    valueNames: [ 'post-link', 'post-date-sortable', 'post-author' ]
+};
+
+var postList = new List('post-list', options);
+</script>

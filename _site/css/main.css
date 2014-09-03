@@ -65,6 +65,13 @@ a         { color: #2a7ae2; text-decoration: none; }
 a:hover   { color: #000; text-decoration: underline; }
 a:visited { color: #205caa; }
 
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid rgb(240,240,240);
+  margin-bottom: 15px
+}
+
 /* Utility */
 
 .wrap:before,
@@ -208,17 +215,67 @@ a:visited { color: #205caa; }
 .gone {
   display: none !important;
 }
-
+.sort-by {
+  font-size: 12px;
+  display: block;
+  padding: 20px 15px;
+  padding-bottom: 0;
+  color: #818181;
+  margin-bottom: -5px;
+}
 .sort-container .asc, .sort-container .desc {
-  color: red;
+  line-height: 1em;
+  color: rgb(158, 196, 59);
+  position: relative;
 }
 
-.search-container input {
+.sort-container .asc:before, .sort-container .desc:before {
+  color: rgb(158, 196, 59);
+  position: absolute;
+  display: block;
+  left: -20px;
+  background-image: url('/images/arrows.png');
+  background-size: 14px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+.sort-container .asc:before {
+  content: ' ';
+  background-position: center 13px;
+  top: -6px;
+}
+.sort-container .desc:before {
+  content: ' ';
+  top: 12px;
+  background-position: center -7px;
+}
+
+.sort-container {
+  padding: 15px;
+  padding-top: 0px;
+}
+.sort {
+  padding-right: 30px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.search-container .search {
   width: 100%;
-  height: 30px;
+  box-sizing: border-box;
   border: 1px solid #ccc;
   outline: none;
-  padding: 4px 20px;
+  padding: 5px 15px;
   font-size: 26px;
   font-family: 'gentium book basic';
 }

@@ -5,13 +5,15 @@ layout: default
 <div class="home" id="post-list">
 
   <div class="search-container">
-    <input class="search" />
+    <input class="search" placeholder="Search"/>
   </div>
+  <span class="sort-by">Sort By:</span>
   <div class="sort-container">
     <span class="sort" data-sort="post-link">Title</span>
     <span class="sort" data-sort="post-date-sortable">Date</span>
     <span class="sort" data-sort="post-author">Author</span>
   </div>
+  <hr />
   <ul class="posts list">
     {% for post in site.posts %}
       <li>
